@@ -6,9 +6,9 @@ import React, { useState } from 'react';
 */
 
 export default function DarkMode() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setDarkMode] = useState(false);
   const handleDarkMode = () => {
-    setIsDarkMode(true);
+    setDarkMode(true);
   };
   const handleLightMode = () => {
     setIsDarkMode(false);

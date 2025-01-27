@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 /*
   when the button with the className dark-mode-button is clicked, the page should be displayed in dark mode
 
@@ -6,17 +5,14 @@ import React, { useState } from 'react';
 */
 
 export default function DarkMode() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = React.useState(false);
   const handleDarkMode = () => {
-    setIsDarkMode(true);
-  };
-  const handleLightMode = () => {
-    setIsDarkMode(false);
+    setDarkMode(true);
   };
   return (
-    <div className={`page ${isDarkMode ? "dark-mode" : ""}`}>
+    <div className='page ${darkMode ? "dark-mode" : ""}'>
       <button className='dark-mode-button' onClick={handleDarkMode}>Dark Mode</button>
-      <button className='light-mode-button' onClick={handleLightMode}>Light Mode</button>
+      <button className='light-mode-button' onClick={handleDarkMode}>Light Mode</button>
     </div>
   )
 }
